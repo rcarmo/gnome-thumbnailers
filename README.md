@@ -22,7 +22,7 @@ The `Makefile` does that for you.
 ## Dependencies
 
 * `3mf.thumbnailer` requires nothing but Python 3 installed, because it cheats and steals the thumbnail the slicer inserts into the file.
-* `stlscad.thumbnailer` requires `Xvfb`, `openscad` and `imagemagick` to be installed to render and convert files.
+* `stlscad.thumbnailer` requires `Xvfb`, `openscad` and `ImageMagick` installed to render and convert files.
 
 ## FAQ
 
