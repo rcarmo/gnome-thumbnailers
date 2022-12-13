@@ -4,7 +4,7 @@ This is a small set of custom thumbnailer scripts (mostly for 3D printing format
 
 ## Formats
 
-* `.3mf` (Cura, SuperSlicer, etc.)
+* `.3mf` (Cura, PrusaSlicer, SuperSlicer, etc.)
 * `.scad` (OpenSCAD, will blindly render the default object)
 * `.stl` (Actually uses OpenSCAD to render as well)
 
@@ -15,8 +15,8 @@ This is a small set of custom thumbnailer scripts (mostly for 3D printing format
 
 ## Dependencies
 
-* `3mf.thumbnailer` requires nothing but Python 3 installed
-* `stlscad.thumbnailer` requires `Xvfb`, `openscad` and `imagemagick` to be installed
+* `3mf.thumbnailer` requires nothing but Python 3 installed, because it cheats and steals the thumbnail the slicer inserts into the file
+* `stlscad.thumbnailer` requires `Xvfb`, `openscad` and `imagemagick` to be installed to convert and render files
 
 ## FAQ
 
