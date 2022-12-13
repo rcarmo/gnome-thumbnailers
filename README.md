@@ -2,7 +2,7 @@
 
 This is a small set of custom thumbnailer scripts (mostly for 3D printing formats) that I crafted based on various samples floating about on the Internet, and which work in GNOME 42+.
 
-In short, these will render pretty little file previews in your file manager (not just Nautilus, but I tested with it).
+In short, these will render pretty little file previews in your file manager (not just Nautilus, but that is what I tested with).
 
 ## Supported Formats
 
