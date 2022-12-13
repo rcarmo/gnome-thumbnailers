@@ -32,4 +32,6 @@ Yes. But it works _perfectly_ with `xvfb-run` and software rendering, so I'd rat
 
 Sometimes brute force is the simplest, more maintainable (and more secure) approach.
 
+> I have a `.3mf` file without thumbnail, is the thumbnailer broken?
 
+No. It's quite likely that the slicer you used to create it did not include a thumbnail, or that it is in a weird format. There are limits to these things.
