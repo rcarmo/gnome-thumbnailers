@@ -38,6 +38,10 @@ Sometimes brute force is the simplest, more maintainable (and more secure) appro
 
 No. It's quite likely that the slicer you used to create it did not include a thumbnail, or that it is in a weird format. There are limits to these things.
 
+> My OpenSCAD thumbnails are blank!
+
+This usually happens when it's either a library file (that would render nothing on its own) or a customizer file that is missing some default (and hence renders nothing as well).
+
 > My Blender thumbnails are blank!
 
 That usually happens when you either don't have a camera defined or it's pointing towards literally nothing.
