@@ -17,6 +17,8 @@ In short, these will render pretty little file previews in your file manager (no
 * remove all the cached thumbnails in `~/.cache/thumbnails`
 * restart Nautilus with `nautilus -q`
 
+The `Makefile` does that for you.
+
 ## Dependencies
 
 * `3mf.thumbnailer` requires nothing but Python 3 installed, because it cheats and steals the thumbnail the slicer inserts into the file.
