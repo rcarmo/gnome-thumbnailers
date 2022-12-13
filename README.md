@@ -9,6 +9,7 @@ In short, these will render pretty little file previews in your file manager (no
 * `.3mf` (Cura, PrusaSlicer, SuperSlicer, etc.)
 * `.scad` (OpenSCAD, will blindly render the default object)
 * `.stl` (Actually uses OpenSCAD to render as well)
+* `.blend` (uses the built-in `blender-thumbnailer` that comes with Blender)
 
 ## Installation
 
@@ -23,6 +24,7 @@ The `Makefile` does that for you.
 
 * `3mf.thumbnailer` requires nothing but Python 3 installed, because it cheats and steals the thumbnail the slicer inserts into the file.
 * `stlscad.thumbnailer` requires `Xvfb`, `openscad` and `ImageMagick` installed to render and convert files.
+* `blender.thumbnailer` requires Blender installed
 
 ## FAQ
 
@@ -35,3 +37,7 @@ Sometimes brute force is the simplest, more maintainable (and more secure) appro
 > I have a `.3mf` file without thumbnail, is the thumbnailer broken?
 
 No. It's quite likely that the slicer you used to create it did not include a thumbnail, or that it is in a weird format. There are limits to these things.
+
+> My Blender thumbnails are blank!
+
+That usually happens when you either don't have a camera defined or it's pointing towards literally nothing.

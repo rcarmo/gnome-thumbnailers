@@ -1,0 +1,4 @@
+[Thumbnailer Entry]
+TryExec=blender-thumbnailer
+Exec=blender-thumbnailer %i %o
+MimeType=application/x-blender;
