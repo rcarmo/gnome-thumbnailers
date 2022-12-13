@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+from sys import argv
+from zipfile import ZipFile
+
+THUMBNAIL_FILENAME = 'Metadata/thumbnail.png'
+
+with ZipFile(argv[1], 'r') as zip:
+    if THUMBNAIL_FILENAME in zip.namelist():
+        thumbnail = zip.read(THUMBNAIL_FILENAME, '')
+        with open(argv[2], 'wb') as f:
+            f.write(thumbnail)

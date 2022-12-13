@@ -1,0 +1,3 @@
+[Thumbnailer Entry]
+Exec=/usr/local/bin/3mf_thumbnailer %i %o
+MimeType=application/vnd.ms-3mfdocument;model/3mf;

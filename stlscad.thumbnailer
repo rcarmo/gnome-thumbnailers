@@ -1,0 +1,4 @@
+[Thumbnailer Entry]
+Exec=/usr/local/bin/stlscad_thumbnailer %i %o %s
+MimeType=text/x-scad;application/x-openscad;application/sla;model/x.stl-binary;model/x.stl-ascii;model/stl
+

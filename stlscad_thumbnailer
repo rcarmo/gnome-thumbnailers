@@ -1,0 +1,16 @@
+#!/bin/sh
+IFS=$'\n\t'
+TARGET="$1"
+BASENAME=$(basename "$1")
+EXT=${BASENAME##*.}
+COLORSCHEME="Cornfield"
+if [ "$EXT" == "stl" ]; then
+    COLORSCHEME="Tomorrow Night"
+	TARGET=$(mktemp --suffix=.scad)
+    echo "import(\"$1\");" > $TARGET
+fi
+xvfb-run openscad -q --colorscheme="$COLORSCHEME" --imgsize="$3,$3" -o "$2" "$TARGET"
+convert "$2" -fuzz 20% -transparent white "$2"
+if [ "$EXT" == "stl" ]; then
+    rm "$TARGET"
+fi
