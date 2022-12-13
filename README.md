@@ -7,6 +7,7 @@ In short, these will render pretty little file previews in your file manager (no
 ## Supported Formats
 
 * `.3mf` (Cura, PrusaSlicer, SuperSlicer, etc.)
+* `.gcode` with embedded thumbnails
 * `.scad` (OpenSCAD, will blindly render the default object)
 * `.stl` (Actually uses OpenSCAD to render as well)
 * `.blend` (uses the built-in `blender-thumbnailer` that comes with Blender)
@@ -22,7 +23,7 @@ The `Makefile` does that for you.
 
 ## Dependencies
 
-* `3mf.thumbnailer` requires nothing but Python 3 installed, because it cheats and steals the thumbnail the slicer inserts into the file.
+* `3mf.thumbnailer` and `gcode.thumbnailer` require nothing but Python 3 installed, because they cheat and use the thumbnail the slicer inserts into the file.
 * `stlscad.thumbnailer` requires `Xvfb`, `openscad` and `ImageMagick` installed to render and convert files.
 * `blender.thumbnailer` requires Blender to be installed.
 
@@ -34,7 +35,7 @@ Yes. But it works _perfectly_ with `xvfb-run` and software rendering, so I'd rat
 
 Sometimes brute force is the simplest, more maintainable (and more secure) approach.
 
-> I have a `.3mf` file without thumbnail, is the thumbnailer broken?
+> I have a `.3mf` or `.gcode` file without thumbnail, is the thumbnailer broken?
 
 No. It's quite likely that the slicer you used to create it did not include a thumbnail, or that it is in a weird format. There are limits to these things.
 

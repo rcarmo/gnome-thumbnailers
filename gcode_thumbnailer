@@ -1,0 +1,27 @@
+#!/usr/bin/python3
+from sys import argv
+from base64 import b64decode
+from re import compile, IGNORECASE
+
+START_PATTERN = compile(r'^; thumbnail begin\s([0-9]+)x([0-9]+)\s([0-9]+)', IGNORECASE)
+END_PATTERN = compile(r'^; thumbnail end', IGNORECASE)
+thumbnails=[]
+
+capture = False
+with open(argv[1], 'r') as gcode:
+    for line in gcode.readlines():
+        if capture and not END_PATTERN.match(line):
+            thumbnail = thumbnail + line.strip().split(" ")[1]
+        match = START_PATTERN.match(line)
+        if match:
+            capture = True
+            thumbnail = ''
+        elif END_PATTERN.match(line):
+            thumbnails.append(thumbnail)
+            capture = False
+
+if len(thumbnails):
+    thumbnails.sort(key=lambda s: -len(s))
+    with open(argv[2], 'wb') as f:
+        f.write(b64decode(thumbnails[0]))
+

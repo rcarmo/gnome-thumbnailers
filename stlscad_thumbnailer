@@ -17,3 +17,6 @@ convert "$2" -fuzz 20% -transparent white "$2"
 if [ "$EXT" == "stl" ]; then
     rm "$TARGET"
 fi
+# clean up after Xvfb
+rm -rf /tmp/.X11-unix
+rm -f /tmp/.X99-lock
