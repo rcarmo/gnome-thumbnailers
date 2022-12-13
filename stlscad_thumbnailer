@@ -2,7 +2,10 @@
 IFS=$'\n\t'
 TARGET="$1"
 BASENAME=$(basename "$1")
+# grab extension
 EXT=${BASENAME##*.}
+# lowercase it
+EXT=${EXT,,}
 COLORSCHEME="Cornfield"
 if [ "$EXT" == "stl" ]; then
     COLORSCHEME="Tomorrow Night"
