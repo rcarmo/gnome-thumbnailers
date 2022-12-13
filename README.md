@@ -4,7 +4,7 @@ This is a small set of custom thumbnailer scripts (mostly for 3D printing format
 
 In short, these will render pretty little file previews in your file manager (not just Nautilus, but that is what I tested with):
 
-![](demo/cube.png)
+![](demo/demo.png)
 
 ## Supported Formats
 
